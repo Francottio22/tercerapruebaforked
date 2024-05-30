@@ -1,5 +1,5 @@
 # GithHub Actions Workflow generated with Ghygen
-# Original configuration: https://ghygen.hi-folks.dev?code=c40f09122a01d5d31b87720ee93bdff4
+# Original configuration: https://ghygen.hi-folks.dev?code=25c842c7eae95ca53d8859e45bee310c
 name: laragit
 on:
   push:
@@ -104,15 +104,6 @@ jobs:
 
       run: vendor/bin/phpunit --testdox
 
-    - name: Execute tests (Unit and Feature tests) via PestPHP
-# Set environment
-      env:
-        DB_CONNECTION: mysql
-        DB_DATABASE: db_test_laravel
-        DB_PORT: 33306
-        DB_USER: root
-
-      run: vendor/bin/pest
 
 
     - name: Execute Code Sniffer via phpcs
